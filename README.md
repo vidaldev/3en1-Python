@@ -2,7 +2,7 @@
 
 Este repositorio pertenece a un reto que consiste en construir la misma aplicación en 3 lenguajes diferentes. Los lenguajes elegidos fueron los siguientes
 
-* Python [ [repositorio](https://github.com/vidaldev/3en1-Python) | [live]() ]
+* Python [ [repositorio](https://github.com/vidaldev/3en1-Python) | [live](https://repl.it/@vidaldev/3en1-Python) ]
 * NodeJS [ [repositorio]() | [live]() ]
 * PHP [ [repositorio]() | [live]() ]
 
