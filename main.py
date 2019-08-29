@@ -16,6 +16,40 @@ def index():
     }
     return jsonify(response_fail), 200
 
+@app.route('/login', methods = ['GET'])
+def loginauth():
+  if (request.method == 'GET'):
+    arg_param = request.get_json()
+    
+    # Se verifica si los parametros existen
+    _arg_email = verifyExist(arg_param, 'email')
+    _arg_password = verifyExist(arg_param, 'password')
+
+    data_obligatorios = [
+      _arg_email,
+      _arg_password
+    ]
+
+    verify_obligatorios = verifyRequired(data_obligatorios)
+
+    if (verify_obligatorios == False):
+      return jsonify(response_incomplete), 401
+
+    # Se llama la clase que tiene el metodo de autentificacion de usuario
+    __auth = AuthUser(_arg_email,_arg_password)
+    r_auth = __auth.auth_user()
+    r_status = 200
+
+    if (r_auth == False):
+      r_auth = response_false
+      r_status = 401
+
+      return jsonify(r_auth), r_status
+    else:
+      r_status = 200
+
+      return jsonify({"response": "Loguea con exito"}), r_status
+      
 @app.route('/createUser', methods = ['POST'])
 def createUser():
   if (request.method == 'POST'):
