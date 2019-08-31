@@ -1,0 +1,8 @@
+flask
+firebase
+firebase-admin
+python-jwt
+gcloud
+sseclient
+pycrypto
+requests-toolbelt
