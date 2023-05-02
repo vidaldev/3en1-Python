@@ -6,7 +6,7 @@ authors = ["Jose Vidal <xtrate@protonmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-Flask = "^1.1"
+Flask = "^2.2"
 firebase = "^3.0"
 firebase_admin = "^2.18"
 python_jwt = "^3.2"
